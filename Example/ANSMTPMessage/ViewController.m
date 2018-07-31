@@ -34,28 +34,27 @@
 
 
 - (void)mailFromQQ{
-    [ANSMTPMessageManager setupConfigWithServer:@"smtp.qq.com" withFrom:@"834893274@qq.com" withPassword:@"nfwwrawlatiubgae"];
+    [ANSMTPMessageManager setupConfigWithServer:@"smtp.qq.com" withFrom:@"你的qq邮箱@qq.com" withPassword:@"授权码"];
     
     
     NSString * sb = [NSString stringWithFormat:@"%ld",random()%100000];
     NSString * body = [NSString stringWithFormat:@"%ld",random()%100000];
-    NSArray * cc = @[@"anzhongpeng_ios@163.com",@"penganzhong@csc-sz.com"];
+    NSArray * cc = @[@"xxx@163.com",@"xxx@csc-sz.com"];
    // NSString * path =[[NSBundle mainBundle] pathForResource:@"ex.txt" ofType:nil];
-    
-    [ANSMTPMessageManager sendMaileWithTo:@"anzhongpeng_ios@163.com" cc:cc subject:sb body:body path:nil delegate:self];
+    [ANSMTPMessageManager sendMaileWithTo:@"收件箱" cc:cc subject:sb body:body path:nil delegate:self];
 }
 
 - (void)mailFrom163{
     
-    [ANSMTPMessageManager setupConfigWithServer:@"smtp.163.com" withFrom:@"anzhongpeng_ios@163.com" withPassword:@"qq834893274"];
+    [ANSMTPMessageManager setupConfigWithServer:@"smtp.163.com" withFrom:@"xxxxx@163.com" withPassword:@"xxxxx"];
     
     
     NSString * sb = [NSString stringWithFormat:@"%ld",random()%100000];
     NSString * body = [NSString stringWithFormat:@"%ld",random()%100000];
-    NSArray * cc = @[@"penganzhong@csc-sz.com"];
+    NSArray * cc = @[@"xxxxxxx@csc-sz.com"];
     NSString * path =[[NSBundle mainBundle] pathForResource:@"ex.txt" ofType:nil];
     
-    [ANSMTPMessageManager sendMaileWithTo:@"834893274@qq.com" cc:cc subject:sb body:body path:path delegate:self];
+    [ANSMTPMessageManager sendMaileWithTo:@"xxxxxx@qq.com" cc:cc subject:sb body:body path:path delegate:self];
 }
 
 
